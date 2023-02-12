@@ -26,7 +26,7 @@ public class DenuncianteTeste {
 
     @Before
     public void dummy() {
-        sut = new DenuncianteService();
+        sut = new DenuncianteService(denuncianteRepository);
 
         denunciante = new Denunciante();
         denunciante.setNome(NOME);
