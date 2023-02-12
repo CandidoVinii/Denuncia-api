@@ -44,7 +44,7 @@ public class EnderecoTeste {
     }
 
     @Test
-    public void save_address_respository() {
+    public void save_endereco() {
         sut.save(endereco);
 
         verify(enderecoRepository).save(endereco);
