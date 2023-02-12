@@ -13,6 +13,14 @@ import static org.mockito.Mockito.verify;
 @RunWith(SpringRunner.class)
 public class EnderecoTeste {
 
+    private static final String LOGRADOURO = "Rua 1";
+    private static final String BAIRRO = "São Pedro";
+    private static final String CIDADE = "Laranjeiras";
+    private static final String ESTADO = "São Paulo";
+    private static final String PAIS = "Brasil";
+    private static final String CEP = "36037000";
+    private static final Double LONGITUDE = -47.887251273393815;
+    private static final Double LATITUDE = -47.887251273393815;
     @MockBean
     private EnderecoRepository enderecoRepository;
 
@@ -23,6 +31,16 @@ public class EnderecoTeste {
     @Before
     public void dummy() {
         sut = new EnderecoService(enderecoRepository);
+
+        endereco = new Endereco();
+        endereco.setLogradouro(LOGRADOURO);
+        endereco.setBairro(BAIRRO);
+        endereco.setCidade(CIDADE);
+        endereco.setEstado(ESTADO);
+        endereco.setPais(PAIS);
+        endereco.setCep(CEP);
+        endereco.setLongitude(String.valueOf(LONGITUDE));
+        endereco.setLatitude(String.valueOf(LATITUDE));
     }
 
     @Test
