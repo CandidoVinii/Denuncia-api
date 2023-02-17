@@ -5,6 +5,7 @@ Esta é uma API Spring Boot que permite o cadastro de denúncias, incluindo info
 A API permite que os usuários realizem as seguintes operações:
 
 - Cadastro de uma nova denúncia (nome do denunciante, CPF, título, descrição, latitude e longitude), onde fazemos a busca do endereço a partir da longitude e latitude informada;
+- Por questão de otimização e performace foi utilizado o cache para fazer a requisição para buscar o endereço do denunciante;
 
 ### Para executar a aplicação, é necessário ter as seguintes ferramentas instaladas:
 
